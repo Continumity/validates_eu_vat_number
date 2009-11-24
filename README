@@ -9,8 +9,16 @@ This plugin provides an ActiveRecord validator to validate European VAT numbers 
 Example
 =======
 
-  class Business
+  class Business < ActiveRecord::Base
     validates_eu_vat_number :vat, :requester => 'YOUR-VAT-NUMBER'
-	end
+  end
+
+
+Tests
+=====
+
+To run the test, please change VALID_VAT in test/validates_eu_vat_number_test.rb to your
+own VAT number.
+
 
 Copyright (c) 2009 Richard Hirner, released under the MIT license
